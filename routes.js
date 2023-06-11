@@ -29,6 +29,7 @@ const requestHandler = (req,res) => {
             fs.writeFile('message.txt', message, err => {
                 res.statusCode = 302;
                 res.setHeader('Location', '/')
+                
                 return res.end();
             })
         })
